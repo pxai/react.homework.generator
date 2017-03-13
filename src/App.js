@@ -1,26 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FormGenerate from './FormGenerate';
 import Exercise from './Exercise';
 
-class App extends Component {
-  getDefaultProps () {
+var App = React.createClass({
+  getDefaultProps: function () {
       return {
         title: 'React Homework Generator'
       };
-  }
+  },
 
-  getInitialState () {
+  getInitialState: function () {
+    return {};
+  },
 
-  }
-
-  render() {
+  render: function () {
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>React HomeWork Generator</h2>
         </div>
+        <FormGenerate />
         <p className="App-intro">
           <Exercise />
         </p>
@@ -28,10 +30,6 @@ class App extends Component {
     );
   }
 
-  onButtonClick (e) {
-    e.preventDefault();
-
-  }
-}
+});
 
 export default App;

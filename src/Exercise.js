@@ -1,33 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Exercise extends Component {
-  getDefaultProps () {
+var Exercise = React.createClass( {
+  getDefaultProps: function () {
       return {
         title: 'React Homework Generator'
       };
-  }
+  },
 
-  getInitialState () {
+  getInitialState: function () {
+    return {};
+  },
 
-  }
-
-  render() {
+  render: function () {
     return (
       <div className="Exercise">
         <div className="Exercise-header">
           <h3>Exercise</h3>
         </div>
-        <p >
+        <p>
             Exercise
         </p>
       </div>
     );
   }
 
-  onButtonClick (e) {
-    e.preventDefault();
-
-  }
-}
+});
 
 export default Exercise;
