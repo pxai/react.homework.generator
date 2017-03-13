@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Exercise from './Exercise';
 
 class App extends Component {
+  getDefaultProps () {
+      return {
+        title: 'React Homework Generator'
+      };
+  }
+
+  getInitialState () {
+
+  }
+
   render() {
     return (
       <div className="App">
@@ -11,10 +22,15 @@ class App extends Component {
           <h2>React HomeWork Generator</h2>
         </div>
         <p className="App-intro">
-          To get started, just edit <code>src/App.js</code> and save to reload.
+          <Exercise />
         </p>
       </div>
     );
+  }
+
+  onButtonClick (e) {
+    e.preventDefault();
+
   }
 }
 
