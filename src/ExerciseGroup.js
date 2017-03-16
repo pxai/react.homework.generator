@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Exercise = React.createClass( {
+var ExerciseGroup = React.createClass( {
   getDefaultProps: function () {
       return {
         title: 'React Homework Generator'
@@ -13,17 +13,17 @@ var Exercise = React.createClass( {
 
   render: function () {
     return (
-      <div className="Exercise">
-        <div className="Exercise-header">
-
+      <div className="ExerciseGroup">
+        <div className="ExerciseGroup-header">
+          <h3>Exercise Group</h3>
         </div>
-        <div className="result">
+        <p>
             Exercise
-        </div>
+        </p>
       </div>
     );
   }
 
 });
 
-export default Exercise;
+export default ExerciseGroup;
