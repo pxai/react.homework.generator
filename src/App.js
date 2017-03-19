@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import FormGenerate from './FormGenerate';
-import Exercise from './Exercise';
+import ExerciseGroup from './ExerciseGroup';
 
 var App = React.createClass({
   getDefaultProps: function () {
@@ -24,7 +24,7 @@ var App = React.createClass({
         </div>
         <FormGenerate />
         <p className="App-intro">
-          <Exercise />
+          <ExerciseGroup  />
         </p>
       </div>
     );

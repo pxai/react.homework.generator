@@ -1,4 +1,5 @@
 import React from 'react';
+import Exercise from './Exercise';
 
 var ExerciseGroup = React.createClass( {
   getDefaultProps: function () {
@@ -10,16 +11,20 @@ var ExerciseGroup = React.createClass( {
   getInitialState: function () {
     return {};
   },
+  generateExercises : function () {
 
+  },
   render: function () {
     return (
       <div className="ExerciseGroup">
         <div className="ExerciseGroup-header">
           <h3>Exercise Group</h3>
         </div>
-        <p>
-            Exercise
-        </p>
+        <div>
+            <Exercise operator="+" />
+            <Exercise operator="+" />
+
+        </div>
       </div>
     );
   }
