@@ -4,7 +4,8 @@ import Exercise from './Exercise';
 var ExerciseGroup = React.createClass( {
   getDefaultProps: function () {
       return {
-        title: 'React Homework Generator'
+        title: 'React Homework Generator',
+        operations: [0,0,0,0,0,0,0,0]
       };
   },
 
@@ -21,9 +22,10 @@ var ExerciseGroup = React.createClass( {
           <h3>Exercise Group</h3>
         </div>
         <div>
-            <Exercise operator="+" />
-            <Exercise operator="+" />
-
+          {this.props.operations.map(function(operation) {
+            return <Exercise operator="+" />
+            })
+          }
         </div>
       </div>
     );
